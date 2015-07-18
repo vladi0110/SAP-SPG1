@@ -8,6 +8,7 @@ create table poi
 (
 poi_name varchar(255) not null,
 owner_name varchar(255) not null,
+poi_type varchar(255), /*can also use enum*/
 coordinates_latitude int not null,
 coordinates_longitude int not null,
 address text not null,
@@ -19,9 +20,9 @@ delimiter //
 
 /* add a new poi*/
 drop procedure if exists add_poi //
-create procedure add_poi(in name varchar(255), in owner varchar(255), in latitude int, in longitude int, in this_address text, in o_key varchar(10))
+create procedure add_poi(in name varchar(255), in owner varchar(255), in type varchar(255),  in latitude int, in longitude int, in this_address text, in o_key varchar(10))
 begin
-	insert into poi values(name, owner, latitude, longitude, this_address, o_key);
+	insert into poi values(name, owner, type, latitude, longitude, this_address, o_key);
 end //
 
 /* deletes a poi*/
@@ -50,6 +51,13 @@ drop procedure if exists get_poi_by_name //
 create procedure get_poi_by_name(in name varchar(255))
 begin
 	select * from poi where poi_name = name;
+end //
+
+/* returns poi specified by type*/
+drop procedure if exists get_poi_by_type //
+create procedure get_poi_by_type(in type varchar(255))
+begin
+	select * from poi where poi_type = type;
 end //
 
 /* returns poi specified by address*/
