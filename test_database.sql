@@ -12,8 +12,8 @@ poi_type varchar(255), /*can also use enum*/
 coordinates_latitude int not null, /* probably will not remain as int type*/
 coordinates_longitude int not null, /* probably will not remain as int type*/
 address text not null,
-poi_key varchar(10),
-primary key(poi_key)/* unique key generated automatically*/
+poi_key varchar(10),/* unique key generated automatically*/
+primary key(poi_key)
 );
 
 delimiter //
