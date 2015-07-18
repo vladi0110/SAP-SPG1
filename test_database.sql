@@ -88,7 +88,7 @@ begin
 	update poi set owner_name = new_owner where poi_key = p_key;
 end //
 
-/* replaces the address key of a poi with new one*/
+/* replaces the address of a poi with new one*/
 drop procedure if exists update_poi_address //
 create procedure update_poi_address(in new_address varchar(255), in p_key varchar(10))
 begin
