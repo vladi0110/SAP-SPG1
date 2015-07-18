@@ -12,24 +12,24 @@ poi_type varchar(255), /*can also use enum*/
 coordinates_latitude int not null, /* probably will not remain as int type*/
 coordinates_longitude int not null, /* probably will not remain as int type*/
 address text not null,
-owner_key varchar(10),
-primary key(poi_name, coordinates_latitude, coordinates_longitude)
+poi_key varchar(10),
+primary key(poi_key)/* unique key generated automatically*/
 );
 
 delimiter //
 
 /* add a new poi*/
 drop procedure if exists add_poi //
-create procedure add_poi(in name varchar(255), in owner varchar(255), in type varchar(255),  in latitude int, in longitude int, in this_address text, in o_key varchar(10))
+create procedure add_poi(in name varchar(255), in owner varchar(255), in type varchar(255),  in latitude int, in longitude int, in this_address text, in p_key varchar(10))
 begin
-	insert into poi values(name, owner, type, latitude, longitude, this_address, o_key);
+	insert into poi values(name, owner, type, latitude, longitude, this_address, p_key);
 end //
 
 /* deletes a poi*/
 drop procedure if exists delete_poi //
-create procedure delete_poi(in o_key varchar(10))
+create procedure delete_poi(in p_key varchar(10))
 begin
-	delete from poi where owner_key = o_key;
+	delete from poi where poi_key = p_key;
 end //
 
 /* returns all information about all poi*/
@@ -93,13 +93,6 @@ drop procedure if exists update_poi_address //
 create procedure update_poi_address(in new_address varchar(10), in name varchar(255), in owner varchar(255))
 begin
 	update poi set address = new_address where poi_name = name and owner_name = owner;
-end //
-
-/* replaces the owner key of a poi with new one*/
-drop procedure if exists update_poi_owner_key //
-create procedure update_poi_owner_key(in new_o_key varchar(10), in name varchar(255), in owner varchar(255))
-begin
-	update poi set owner_key = new_o_key where poi_name = name and owner_name = owner;
 end //
 
 delimiter ;
