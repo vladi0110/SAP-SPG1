@@ -71,28 +71,28 @@ end //
 drop procedure if exists update_poi_coordinates //
 create procedure update_poi_coordinates(in latitude int, in longitude int, in p_key varchar(10))
 begin
-	update poi set coordinates_latitude = latitude and coordinates_longitude = longitude where poi_name = name and owner_name = owner;
+	update poi set coordinates_latitude = latitude and coordinates_longitude = longitude where poi_key = p_key;
 end //
 
 /* replaces the name of a poi with new one*/
 drop procedure if exists update_poi_name //
 create procedure update_poi_name(in new_name varchar(255), in p_key varchar(10))
 begin
-	update poi set poi_name = new_name where poi_name = name and owner_name = owner;
+	update poi set poi_name = new_name where poi_key = p_key;
 end //
 
 /* replaces the owner of a poi with new one*/
 drop procedure if exists update_poi_owner //
 create procedure update_poi_owner(in new_owner varchar(255), in p_key varchar(10))
 begin
-	update poi set owner_name = new_owner where poi_name = name and owner_name = owner;
+	update poi set owner_name = new_owner where poi_key = p_key;
 end //
 
 /* replaces the address key of a poi with new one*/
 drop procedure if exists update_poi_address //
 create procedure update_poi_address(in new_address varchar(255), in p_key varchar(10))
 begin
-	update poi set address = new_address where poi_name = name and owner_name = owner;
+	update poi set address = new_address where poi_key = p_key;
 end //
 
 delimiter ;
