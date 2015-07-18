@@ -13,7 +13,7 @@ coordinates_latitude int not null,
 coordinates_longitude int not null,
 address text not null,
 owner_key varchar(10),
-primary key(poi_name, owner_name)
+primary key(poi_name, coordinates_latitude, coordinates_longitude)
 );
 
 delimiter //
