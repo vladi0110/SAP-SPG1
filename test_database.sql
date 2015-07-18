@@ -9,8 +9,8 @@ create table poi
 poi_name varchar(255) not null,
 owner_name varchar(255) not null,
 poi_type varchar(255), /*can also use enum*/
-coordinates_latitude int not null,
-coordinates_longitude int not null,
+coordinates_latitude int not null, /* probably will not remain as int type*/
+coordinates_longitude int not null, /* probably will not remain as int type*/
 address text not null,
 owner_key varchar(10),
 primary key(poi_name, coordinates_latitude, coordinates_longitude)
