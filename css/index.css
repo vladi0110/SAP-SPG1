@@ -1,0 +1,49 @@
+a:link, a:visited	{
+				text-decoration:none;
+				color:#cc3333;
+			}
+a:hover			{
+				text-decoration:underline;
+				color:#ff6666;
+			}
+a:active		{
+				text-decoration:underline;
+				color:#ff0000;
+			}
+html, body		{
+				margin:0px;
+				padding:0px;
+				color:#333333;
+				text-align:center;
+				background:#ffffff fixed;
+				font:12px/1.4 Verdana, Geneva, sans-serif;
+			}
+h1			{
+				color:orange;
+				text-align:center;
+				font:24px/3 Georgia, Times New Roman, Times, serif;
+			}
+p			{
+				font:14px/2 Georgia, Times New Roman, Times, serif;
+			}
+.fontserif		{
+				font-family:Georgia, Times New Roman, Times, serif;
+			}
+.fontsansserif		{
+				font-family:Verdana, Geneva, sans-serif;
+			}
+.fontmonospace		{
+				font-family:Lucida Console, Courier, monospace;
+			}
+#map-canvas		{
+				height:300px;
+				width:300px;
+				margin:auto;
+				padding:0px;
+			}
+.content1		{
+				color:#ff0000;
+			}
+.content2		{
+				color:#0000ff;
+			}
