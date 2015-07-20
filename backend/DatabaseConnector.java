@@ -3,8 +3,8 @@ import java.sql.*;
 public class DatabaseConnector {
 
 	private Connection connection = null;
-	private final String username = "username";/*the username and password will be desided when
-	private final String password = "password";the final version of the database is ready*/
+	private final String username = "username";//the username and password will be desided when
+	private final String password = "password";//the final version of the database is ready
 	
 	public DatabaseConnector()
 	{
