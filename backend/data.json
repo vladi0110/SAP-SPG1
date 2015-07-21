@@ -1,3 +1,34 @@
-{"poi":[
-    {"id":"1","name":"Супермаркет Перла", "type":"shop", "description":"", "latitude":"42.644655", "longitude":"23.339647", "image":"pic1.jpg", "address":"ул.проф.Архитект Храбър Попов", "working_hours":"7:30-22:00","account":"normal", "phone":""},
-]}
+{
+    "poi":[
+    {
+        "id":"1",
+        "name":"Супермаркет Перла", 
+        "type":"shop", 
+        "description":"", 
+        "latitude":"42.644655", 
+        "longitude":"23.339647", 
+        "image":"pic1.jpg", 
+        "address":"ул.проф.Архитект Храбър Попов", 
+        "working_hours":"7:00-22:00",
+        "account":"normal", 
+        "phone":""
+        
+    },
+    {
+        "id":"2",
+        "name":"Супермаркет Рекорд", 
+        "type":"shop", 
+        "description":"", 
+        "latitude":"42.643364", 
+        "longitude":"23.338624", 
+        "image":"pic2.jpg", 
+        "address":"ул.проф.д-р Иван Странски, 
+        "working_hours":"7:00-22:00",
+        "account":"normal", 
+        "phone":""
+        
+    },
+
+]
+    
+}
