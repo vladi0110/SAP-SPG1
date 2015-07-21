@@ -32,7 +32,7 @@
         "id":3,
         "name":"Център за набор и печат", 
         "type":"Копирен център", 
-        "description":"принтиране - 4 ст/ксерокс - 3 ст", 
+        "description":"принтиране - 4 ст"\"ксерокс - 3 ст", 
         "latitude":42.644600,  
         "longitude":23.338319, 
         "image":"pic3.jpg", 
@@ -51,6 +51,20 @@
         "longitude":23.339851, 
         "image":"pic4.jpg", 
         "address":"ул.проф.Архитект Храбър Попов", 
+        "working_hours":"non stop",
+        "account":"normal", 
+        "phone":""
+        
+    },
+    {
+        "id":5,
+        "name":"Аптека", 
+        "type":"Аптека", 
+        "description":"", 
+        "latitude":42.642943,
+        "longitude":23.341186, 
+        "image":"pic5.jpg", 
+        "address":"ул.проф.д-р Иван Странски", 
         "working_hours":"non stop",
         "account":"normal", 
         "phone":""
