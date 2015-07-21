@@ -17,7 +17,9 @@ CREATE TABLE `poi` (
 	PRIMARY KEY (`id`)
 ) ENGINE=INNODB;
 
-INSERT INTO poi(name, type, latitude, longitude, ) VALUES
-	(''),
-	(''),
-	('');
+INSERT INTO poi(account, address, description, id, image, latitude, longitude, name, phone, type, working_hours) VALUES
+	('Normal','ул.проф.Архитект Храбър Попов',NULL,1,'pic1.jpg',42.644655,23.339647,'Супермаркет Перла',NULL,'Магазин','7:00-22:00'),
+	('Normal','ул.проф.д-р Иван Странски',NULL,2,'pic2.jpg',42.643364,23.338624,'Супермаркет Рекорд',NULL,'Магазин','7:30-22:00'),
+	('Normal','ул.проф.Архитект Храбър Попов','принтиране - 4 ст\nксерокс - 3 ст',3,'pic3.jpg',42.6446,23.338319,'Център за набор и печат',NULL,'Копирен център','8:00-22:00'),
+	('Normal','ул.проф.Архитект Храбър Попов',NULL,4,'pic4.jpg',42.644668,23.339851,'Банкомат ProCredit Bank',NULL,'ATM','non stop'),
+	('Normal','ул.проф.д-р Иван Странски',NULL,5,'pic5.jpg',42.642943,23.341186,'Аптека',NULL,'Аптека','non stop');
