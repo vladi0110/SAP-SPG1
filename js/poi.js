@@ -24,4 +24,22 @@ function initialize() {
   	});
 }
 
+function AJAX_JSON_Req( url )
+{
+    var AJAX_req = new XMLHttpRequest();
+    AJAX_req.open( "GET", url, true );
+    AJAX_req.setRequestHeader("Content-type", "application/json");
+    AJAX_req.onreadystatechange = function()
+    {
+        if( AJAX_req.readyState == 4 && AJAX_req.status == 200 )
+        {
+        	var response = JSON.parse( AJAX_req.responseText );
+		document.getElementById("poi").innerHTML = "Име: " + response.poi[0].name + "<br />Адрес: " + response.poi[0].address + "<br />Работно време: " + response.poi[0].working_hours;
+       }
+    }
+    AJAX_req.send();
+}
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
+AJAX_JSON_Req( './backend/data.json' );
