@@ -1,3 +1,3 @@
 {"poi":[
-    {"name":"", "type":"", "description":"", "latitude":"", "longitude":"", "image":"", "address":"", "working_hours":"", "advertizer":"", "account":"", "phone":""},
+    {"id":"1","name":"Супермаркет Перла", "type":"shop", "description":"", "latitude":"42.644655", "longitude":"23.339647", "image":"pic1.jpg", "address":"ул.проф.Архитект Храбър Попов", "working_hours":"7:30-22:00","account":"normal", "phone":""},
 ]}
