@@ -12,7 +12,6 @@ CREATE TABLE `poi` (
 	`image` VARCHAR(255) NULL DEFAULT NULL,
 	`address` VARCHAR(255) NULL DEFAULT NULL,
 	`working_hours` VARCHAR(255) NULL DEFAULT NULL,
-	`advertizer` BIT(1) NOT NULL DEFAULT '0',
 	`account` ENUM ('Normal', 'Silver', 'Gold', 'Platinum') NOT NULL DEFAULT 'Normal',
 	`phone` VARCHAR(255) NULL DEFAULT NULL,
 	PRIMARY KEY (`id`)
