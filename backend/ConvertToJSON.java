@@ -25,7 +25,7 @@ public class ConvertToJSON {
 
 	public String convert()
 	{
-		Map json = new LinkedHashMap(); 
+	    Map json = new LinkedHashMap(); 
 	    List list = new ArrayList();
 	    if(results!=null)
 	    {
