@@ -116,6 +116,19 @@
         "working_hours":"9:00 - 20:00 ",
         "account":"normal",
         "phone":""
+    },
+    {
+        "id":10,
+        "name":"Ключар",
+        "type":"Ключар",
+        "description":"",
+        "latitude":42.643752, 
+        "longitude":23.342021, 
+        "image":"pic10.jpg",
+        "address":"ул.акад. Борис Стефанов",
+        "working_hours":"9:00 - 18:00 ",
+        "account":"normal",
+        "phone":""
     }
     
 ]
