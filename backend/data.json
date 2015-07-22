@@ -64,6 +64,19 @@
         "working_hours":"non stop",
         "account":"normal",
         "phone":""
+    },
+    {
+        "id":6,
+        "name":"Банкомат Central Cooperative Bank",
+        "type":"АTM",
+        "description":"",
+        "latitude":42.643184, 
+        "longitude":23.339693,
+        "image":"pic6.jpg",
+        "address":"ул.проф.д-р Иван Странски",
+        "working_hours":"non stop",
+        "account":"normal",
+        "phone":""
     }
 ]
 }
