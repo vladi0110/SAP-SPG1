@@ -13,9 +13,12 @@ a:active		{
 html, body		{
 				margin:0px;
 				padding:0px;
+				width:100%;
+				height:100%;
 				color:#333333;
 				text-align:center;
 				background:#ffffff fixed;
+				overflow:hidden;
 				font:12px/1.4 Verdana, Geneva, sans-serif;
 			}
 h1			{
@@ -26,24 +29,49 @@ h1			{
 p			{
 				font:14px/2 Georgia, Times New Roman, Times, serif;
 			}
-.fontserif		{
+#logo			{
+				background-image:url('../images/logo.png');
+				display:inline-block;
+				width:36px;
+				height:30px;
+				margin:0px;
+				padding:0px;
+				float:left;
+			}
+.f1			{
 				font-family:Georgia, Times New Roman, Times, serif;
 			}
-.fontsansserif		{
+.f2			{
 				font-family:Verdana, Geneva, sans-serif;
 			}
-.fontmonospace		{
-				font-family:Lucida Console, Courier, monospace;
+.nav_item		{
+				display:inline-block;
+				font:26px/1 Lucida Console, Courier, monospace;
+				width:16%;
+				height:100%;
+				border:0px;
+				cursor:pointer;
+			}
+.nav_item:hover		{
+				background:#ffe0e0;
+			}
+#menu			{
+				height:30px;
+				width:100%;
+				background:#ffffe8;
 			}
 #map-canvas		{
-				height:800px;
-				width:800px;
+				height:100%;
+				width:67%;
+				padding:0px;
+				float:left;
+				clear:left;
+			}
+#list			{
+				height:100%;
+				width:33%;
 				margin:auto;
 				padding:0px;
-			}
-.content1		{
-				color:#ff0000;
-			}
-.content2		{
-				color:#0000ff;
+				float:left;
+				background:#e8ffff;
 			}

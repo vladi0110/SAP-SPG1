@@ -1,7 +1,6 @@
 var JSON_url = './backend/data.json';
 
 google.maps.event.addDomListener(window, 'load', initialize);
-google.maps.event.trigger(map, "resize");
 
 function changeDivContent() {
 	document.getElementById("content").innerHTML = Date();
@@ -38,9 +37,9 @@ function AJAX_JSON_Req(map) {
         	var response = JSON.parse(AJAX_req.responseText);
 		for (var k in response.poi) {
 			addPOI(response.poi[k], map);
-				for (var m in response.poi[k]) {
-					var s = s + "<br />" + m + ": " + response.poi[k][m];
-				}
+			for (var m in response.poi[k]) {
+				var s = s + "<br />" + m + ": " + response.poi[k][m];
+			}
 		}
        }
     }
