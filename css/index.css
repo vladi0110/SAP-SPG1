@@ -36,8 +36,8 @@ p			{
 				font-family:Lucida Console, Courier, monospace;
 			}
 #map-canvas		{
-				height:400px;
-				width:400px;
+				height:800px;
+				width:800px;
 				margin:auto;
 				padding:0px;
 			}
