@@ -129,6 +129,32 @@
         "working_hours":"9:00 - 18:00 ",
         "account":"normal",
         "phone":""
+    },
+    {
+        "id":11,
+        "name":"Банкомат ProCredit Bank",
+        "type":"ATM",
+        "description":"",
+        "latitude":42.649685, 
+        "longitude":23.341884,
+        "image":"pic11.jpg",
+        "address":"ул.акад. Борис Стефанов",
+        "working_hours":"non stop",
+        "account":"normal",
+        "phone":""
+    },
+    {
+        "id":12,
+        "name":"Фантастико",
+        "type":"Магазин",
+        "description":"",
+        "latitude":42.650180, 
+        "longitude":23.341598,
+        "image":"pic12.jpg",
+        "address":"ул.акад. Борис Стефанов №12 ",
+        "working_hours":"non stop",
+        "account":"normal",
+        "phone":""
     }
     
 ]
