@@ -77,6 +77,32 @@
         "working_hours":"non stop",
         "account":"normal",
         "phone":""
+    },
+    {
+        "id":7,
+        "name":"Копирен център The Net",
+        "type":"Копирен център",
+        "description":"",
+        "latitude":42.642879, 
+        "longitude":23.339189,
+        "image":"pic7.jpg",
+        "address":"Студентски град блок 59",
+        "working_hours":"8:00 - 23:00 ",
+        "account":"normal",
+        "phone":""
+    },
+    {
+        "id":8,
+        "name":"Дигитален копирен център Кинтек",
+        "type":"Копирен център",
+        "description":"Широкоформатно принтиране, сканиране и копиране",
+        "latitude":42.642594, 
+        "longitude":23.342128, 
+        "image":"pic8.jpg",
+        "address":"ул.акад. Борис Стефанов",
+        "working_hours":"8:00 - 22:00 ",
+        "account":"normal",
+        "phone":""
     }
 ]
 }
