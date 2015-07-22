@@ -33,7 +33,7 @@ function AJAX_JSON_Req(map) {
     AJAX_req.open("GET", JSON_url, true);
     AJAX_req.setRequestHeader("Content-type", "application/json");
     AJAX_req.onreadystatechange = function() {
-        if(AJAX_req.readyState == 4 && AJAX_req.status == 200) {
+        if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
         	var response = JSON.parse(AJAX_req.responseText);
 		for (var k in response.poi) {
 			addPOI(response.poi[k], map);
