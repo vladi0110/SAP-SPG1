@@ -8,8 +8,8 @@
         "latitude":42.644655,
         "longitude":23.339647,
         "image":"pic1.jpg",
-        "address":"ул.проф.Архитект Храбър Попов",
-        "working_hours":"7:00-22:00",
+        "address":"ул.проф.Архитект Храбър Попов 14",
+        "working_hours":"понеделник - неделя 7:30-24:00",
         "account":"normal",
         "phone":""
     },
@@ -22,7 +22,7 @@
         "longitude":23.338624,
         "image":"pic2.jpg",
         "address":"ул.проф.д-р Иван Странски",
-        "working_hours":"7:30-22:00",
+        "working_hours":"понеделник - неделя 8:00-24:00",
         "account":"normal",
         "phone":""
     },
@@ -35,7 +35,7 @@
         "longitude":23.338319,
         "image":"pic3.jpg",
         "address":"ул.проф.Архитект Храбър Попов",
-        "working_hours":"8:00-22:00",
+        "working_hours":"понеделник - петък 9:00-21:00",
         "account":"normal",
         "phone":""
     },
