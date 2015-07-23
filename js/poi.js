@@ -34,19 +34,31 @@ function AJAX_JSON_Req(map) {
 		}
        }
     }
-    AJAX_req.send();
 	$(document).ready(function () {
 	$( "#m1" ).click(function() {
 		$( this ).toggleClass( "nav_item_selected" );
-		filterPOI("Ключар", response.poi[k], map);
+		for (var n in response.poi) {
+			if (response.poi[n]["type"]=="Ключар" || type==null) {
+				var $poi=$('#poi');
+				$poi.prepend('TEST');
+			}
+		}
 	});
+    AJAX_req.send();
 });
 }
 
 function filterPOI(type, d, map) {
-	if (d["type"]==type || d["type"]!=null) {
+	if (d["type"]==type || type==null) {
 		addPOI(d, map);
 		listPOI(d);		
+	}
+}
+
+function filterPOI2(type, d, map) {
+	if (d["type"]==type || type==null) {
+		var $poi=$('#poi');
+		$poi.prepend('TEST');
 	}
 }
 

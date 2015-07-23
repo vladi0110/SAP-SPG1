@@ -37,8 +37,8 @@ p			{
 				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80FFFFFF, endColorstr=#80FFFFFF) ;
 				opacity:0.7;
 				display:inline-block;
-				width:36px;
-				height:30px;
+				width:96px;
+				height:48px;
 				margin:0px;
 				padding:0px;
 				float:left;
@@ -68,7 +68,7 @@ p			{
 				background:#ededed;
 			}
 .nav_item_selected	{
-				background:#ff0000;
+				background:#e00000;
 			}
 #menu			{
 				height:48px;
