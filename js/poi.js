@@ -1,12 +1,8 @@
 var JSON_url = './backend/data.json';
+var POIDATA = [];
+var MARKERS = [];
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
-function changeDivContent() {
-	document.getElementById("content").innerHTML = Date();
-	document.getElementById("content").className = "content2";
-}
 
 function initialize() {
 	geocoder = new google.maps.Geocoder();
@@ -17,48 +13,50 @@ function initialize() {
 	var map = new google.maps.Map(document.getElementById('map-canvas'),
 		mapOptions);
   	AJAX_JSON_Req(map);
-}
-
-function AJAX_JSON_Req(map) {
-    var AJAX_req = new XMLHttpRequest();
-    AJAX_req.open("GET", JSON_url, true);
-    AJAX_req.setRequestHeader("Content-type", "application/json");
-    AJAX_req.onreadystatechange = function() {
-        if (AJAX_req.readyState == 4 && AJAX_req.status == 200) {
-        	var response = JSON.parse(AJAX_req.responseText);
-		for (var k in response.poi) {
-			filterPOI(null, response.poi[k], map);
-			for (var m in response.poi[k]) {
-				var s = s + "<br />" + m + ": " + response.poi[k][m];
-			}
-		}
-       }
-    }
-	$(document).ready(function () {
-	$( "#m1" ).click(function() {
-		$( this ).toggleClass( "nav_item_selected" );
-		for (var n in response.poi) {
-			if (response.poi[n]["type"]=="Ключар" || type==null) {
+  	
+  	
+	$( "#menu .nav_item" ).click(function(e) {
+		$( "#menu .nav_item" ).removeClass("nav_item_selected");
+		$(this).toggleClass( "nav_item_selected" );
+		
+		for(var n = 0; n<POIDATA.length; n++) { 
+			if (POIDATA[n]["type"]=="Ключар") {
 				var $poi=$('#poi');
-				$poi.prepend('TEST');
+				var filter = $(this).attr('data-filter');
+				renderPOIS(filter, map);
 			}
 		}
-	});
-    AJAX_req.send();
 });
 }
 
-function filterPOI(type, d, map) {
-	if (d["type"]==type || type==null) {
-		addPOI(d, map);
-		listPOI(d);		
-	}
+function setAllMap() {
+  for (var i = 0; i < MARKERS.length; i++) {
+    MARKERS[i].setMap(null);
+  }
+}
+function renderPOIS(filter, map) {
+	setAllMap();
+	$('#poi').html('');
+	
+	for (var k in POIDATA) {
+		filterPOI(filter, POIDATA[k], map);
+	}	 
 }
 
-function filterPOI2(type, d, map) {
-	if (d["type"]==type || type==null) {
-		var $poi=$('#poi');
-		$poi.prepend('TEST');
+function AJAX_JSON_Req(map) {
+	$.ajax({ url: JSON_url }).done(function(data) {
+		POIDATA = data.poi;
+		
+		renderPOIS(null, map);
+	});
+}
+
+function filterPOI(type, poi, map) {
+	
+	if (poi["type"]===type || type===null) {
+		addPOI(poi, map);
+		listPOI(poi);		
+		console.log(poi['type'], type);
 	}
 }
 
@@ -93,4 +91,6 @@ function addPOI(d, map) {
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
+  
+  MARKERS.push(marker)
 }
