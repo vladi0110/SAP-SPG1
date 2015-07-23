@@ -8,6 +8,7 @@ function changeDivContent() {
 }
 
 function initialize() {
+	geocoder = new google.maps.Geocoder();
 	var mapOptions = {
 //		center: {lat: 42.65703, lng: 23.35661},
 		center: {lat: 42.644668, lng: 23.339851},
@@ -55,7 +56,7 @@ function addPOI(d, map) {
   var contentString = d["name"] + "<br>" + d["working_hours"] + "<br>" + d["address"] + "<br>" + d["description"];
         var contentString = '<div class="marker-info-win">'+
         '<div class="marker-inner-win"><span class="info-content">'+
-        '<h1 class="marker-heading">'+d["name"]+'</h1>'+
+        '<h1 class="marker-heading">'+d["name"]+'</h1><p>'+d["working_hours"]+'<br />'+d["address"]+'<br />'+d["description"]+'</p>'+
         '<img src="https://maps.googleapis.com/maps/api/streetview?size=240x120&location='+d["latitude"]+','+d["longitude"]+'">'+ 
         '</span>'+
         '</div></div>';

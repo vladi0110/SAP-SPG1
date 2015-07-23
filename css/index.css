@@ -28,7 +28,9 @@ h1			{
 				margin:8px 0px 8px 0px;
 			}
 p			{
-				font:14px/2 Georgia, Times New Roman, Times, serif;
+				font:12px/2 "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+				text-align:left;
+				border-top: 1px solid rgb(208, 208, 208);
 			}
 #logo			{
 				background-image:url('../images/logo.png');
