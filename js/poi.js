@@ -47,9 +47,23 @@ function AJAX_JSON_Req(map) {
 }
 
 function addPOI(d, map) {
-	new google.maps.Marker({
+	var marker = new google.maps.Marker({
 		position: new google.maps.LatLng(d["latitude"], d["longitude"]),
 		map: map,
 		title: d["name"] + "\n" + d["working_hours"] + "\n" + d["address"] + "\n" + d["description"]
 	});
+  var contentString = d["name"] + "<br>" + d["working_hours"] + "<br>" + d["address"] + "<br>" + d["description"];
+        var contentString = '<div class="marker-info-win">'+
+        '<div class="marker-inner-win"><span class="info-content">'+
+        '<h1 class="marker-heading">'+d["name"]+'</h1>'+
+        '<img src="https://maps.googleapis.com/maps/api/streetview?size=240x120&location='+d["latitude"]+','+d["longitude"]+'">'+ 
+        '</span>'+
+        '</div></div>';
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
 }
