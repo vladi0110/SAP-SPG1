@@ -14,6 +14,7 @@ public class Server {
         server.createContext("/jsondata", new Handler());
         server.setExecutor(null);
         server.start();
+        System.out.println("Server is running...");
     }
 
     static class Handler implements HttpHandler {
@@ -25,7 +26,6 @@ public class Server {
         	header.add("Content-Type", "application/json;charset=utf-8");
         	header.add("Access-Control-Allow-Origin", "*");
         	header.add("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        	//header.add("charset", "UTF-8");
             String response = jsonConvert.convert();
             exchange.sendResponseHeaders(200 , response.getBytes("UTF-8").length);
             OutputStream output = exchange.getResponseBody();
@@ -33,5 +33,4 @@ public class Server {
             output.close();
         }
     }
-
 }
