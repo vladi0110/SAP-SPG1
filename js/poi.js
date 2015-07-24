@@ -1,4 +1,4 @@
-var JSON_url = './backend/data.json';
+﻿var JSON_url = 'http://localhost:8000/jsondata';
 var POIDATA = [];
 var MARKERS = [];
 
